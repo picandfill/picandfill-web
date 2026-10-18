@@ -190,3 +190,14 @@ footer .copy { margin-left: auto; }
 /* 기울인 아이폰에 나타나기 효과를 함께 (transform이 겹치지 않게) */
 .tilt.reveal { transform: translateY(48px) perspective(1800px) rotateY(var(--ry, -24deg)) rotateX(var(--rx, 8deg)) rotateZ(var(--rz, 3deg)); }
 .tilt.reveal.in { transform: perspective(1800px) rotateY(var(--ry, -24deg)) rotateX(var(--rx, 8deg)) rotateZ(var(--rz, 3deg)); }
+
+/* 문구 다듬기 (2026-10-19): 이야기 제목은 두 줄째를 연하게, 길어진 제목에 맞춰 크기 */
+.story .display { font-size: clamp(36px, 4.7vw, 82px); }
+.display .soft, h2 .soft { color: #B6B2A8; }
+h1 { font-size: clamp(56px, 8.4vw, 148px); }
+.plan-note { color: var(--sub); font-size: 14px; margin: 18px 4px 0; }
+@media (max-width: 900px) { .story .display { font-size: clamp(30px, 8.6vw, 52px); } }
+@media (min-width: 901px) {
+  .story-stage { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); }
+  .story .display { font-size: clamp(36px, 4.1vw, 72px); }
+}
