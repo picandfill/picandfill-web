@@ -58,3 +58,50 @@ if (memo && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
   };
   type();
 }
+
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// 머리: 내리면 반투명 바탕
+const topBar = document.getElementById('top');
+const onScrollTop = () => topBar && topBar.classList.toggle('scrolled', scrollY > 20);
+addEventListener('scroll', onScrollTop, { passive: true });
+onScrollTop();
+
+// 스크롤 이야기: 고정된 아이폰 속 화면과 글이 단계마다 바뀜, 단계 안에서는 아이폰이 정면으로 조금씩 돎
+const story = document.querySelector('.story');
+if (story) {
+  const steps = story.querySelectorAll('.story-step');
+  const shots = story.querySelectorAll('.story-phone .screen img');
+  const dots = story.querySelectorAll('.story-dots i');
+  const phone = story.querySelector('[data-story-phone]');
+  let current = 0;
+  const update = () => {
+    const r = story.getBoundingClientRect();
+    const p = Math.min(Math.max(-r.top / (r.height - innerHeight), 0), 0.9999);
+    const i = Math.floor(p * steps.length);
+    if (i !== current) {
+      [steps, shots, dots].forEach((list) => list.forEach((el, k) => el.classList.toggle('on', k === i)));
+      current = i;
+    }
+    if (!still && phone) {
+      const f = p * steps.length - i; // 이 단계 안에서 0 → 1
+      phone.style.setProperty('--ry', `${-20 + f * 16}deg`);
+      phone.style.setProperty('--rx', `${7 - f * 4}deg`);
+    }
+  };
+  addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// 첫 화면 아이폰: 마우스를 따라 살짝 기울어짐 (터치 기기 제외)
+const hero = document.querySelector('[data-parallax]');
+if (hero && !still && matchMedia('(hover: hover)').matches) {
+  const phones = [...hero.querySelectorAll('.iphone')].map((el) => ({ el, ry: parseFloat(getComputedStyle(el).getPropertyValue('--ry')) || -18, rx: parseFloat(getComputedStyle(el).getPropertyValue('--rx')) || 6 }));
+  addEventListener('pointermove', (e) => {
+    const x = e.clientX / innerWidth - 0.5, y = e.clientY / innerHeight - 0.5;
+    phones.forEach(({ el, ry, rx }) => {
+      el.style.setProperty('--ry', `${ry + x * 12}deg`);
+      el.style.setProperty('--rx', `${rx - y * 8}deg`);
+    });
+  }, { passive: true });
+}
