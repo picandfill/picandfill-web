@@ -233,3 +233,7 @@ h1 { font-size: clamp(56px, 8.4vw, 148px); }
 /* 종이는 높이로 맞춰 아래 글을 덮지 않게 */
 .paper-stack img { width: auto; height: 340px; }
 @media (max-width: 760px) { .paper-stack img { height: 260px; } }
+
+/* 약관·방침 언어 바꾸기 */
+.doc .langs { font-size: 14px; color: var(--sub, #6B6A64); margin: 0 0 8px; }
+.doc .langs a { color: inherit; }
