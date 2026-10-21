@@ -237,3 +237,6 @@ h1 { font-size: clamp(56px, 8.4vw, 148px); }
 /* 약관·방침 언어 바꾸기 */
 .doc .langs { font-size: 14px; color: var(--sub, #6B6A64); margin: 0 0 8px; }
 .doc .langs a { color: inherit; }
+
+/* 아래 사업자 정보 (전자상거래법 표시) */
+footer .biz { flex-basis: 100%; width: 100%; margin: 6px 0 0; font-size: 12px; color: var(--sub); }
