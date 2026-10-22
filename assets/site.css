@@ -45,7 +45,7 @@ a { color: inherit; }
 .hero::before { content: ''; position: absolute; width: 90vmax; height: 90vmax; right: -30vmax; top: -30vmax; border-radius: 50%; background: radial-gradient(circle, rgba(31,107,94,.16), transparent 60%); z-index: -1; }
 .hero::after { content: ''; position: absolute; width: 70vmax; height: 70vmax; left: -30vmax; bottom: -40vmax; border-radius: 50%; background: radial-gradient(circle, rgba(224,133,90,.18), transparent 60%); z-index: -1; }
 .kicker { font-size: 14px; font-weight: 700; letter-spacing: .08em; color: var(--peach-ink); margin: 0 0 18px; }
-h1, .display { font-weight: 700; letter-spacing: -0.055em; line-height: .98; margin: 0; }
+h1, .display { font-weight: 700; letter-spacing: -0.055em; line-height: 1.12; margin: 0; }
 h1 { font-size: clamp(64px, 10.4vw, 176px); }
 h1 .soft { color: #B6B2A8; }
 .lead { font-size: clamp(17px, 1.5vw, 21px); color: var(--sub); margin: 28px 0 34px; max-width: 30em; }
@@ -244,7 +244,7 @@ footer .biz { flex-basis: 100%; width: 100%; margin: 6px 0 0; font-size: 12px; c
 /* ── 반쪽 따라 하기: 화면 4장에 순서와 설명 ── */
 .steps-head { margin-top: 120px; padding-top: 48px; border-top: 1px solid var(--line); }
 .steps-head .num { font-size: 13px; font-weight: 700; letter-spacing: .1em; }
-.steps-head h3 { font-size: clamp(32px, 4vw, 60px); letter-spacing: -0.05em; line-height: 1.05; margin: 10px 0 0; }
+.steps-head h3 { font-size: clamp(32px, 4vw, 60px); letter-spacing: -0.05em; line-height: 1.2; margin: 10px 0 0; }
 .steps-head p { color: var(--sub); font-size: clamp(16px, 1.4vw, 20px); margin: 14px 0 0; }
 .steps { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 36px); }
 .steps li { display: flex; flex-direction: column; }
