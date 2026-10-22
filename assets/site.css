@@ -240,3 +240,22 @@ h1 { font-size: clamp(56px, 8.4vw, 148px); }
 
 /* 아래 사업자 정보 (전자상거래법 표시) */
 footer .biz { flex-basis: 100%; width: 100%; margin: 6px 0 0; font-size: 12px; color: var(--sub); }
+
+/* ── 반쪽 따라 하기: 화면 4장에 순서와 설명 ── */
+.steps-head { margin-top: 120px; padding-top: 48px; border-top: 1px solid var(--line); }
+.steps-head .num { font-size: 13px; font-weight: 700; letter-spacing: .1em; }
+.steps-head h3 { font-size: clamp(32px, 4vw, 60px); letter-spacing: -0.05em; line-height: 1.05; margin: 10px 0 0; }
+.steps-head p { color: var(--sub); font-size: clamp(16px, 1.4vw, 20px); margin: 14px 0 0; }
+.steps { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.4vw, 36px); }
+.steps li { display: flex; flex-direction: column; }
+.steps .iphone { --w: min(17vw, 230px); align-self: center; margin: 0 0 34px; box-shadow: 0 0 0 1.5px #4A4945, 0 0 0 3px #B9B5AC, 0 24px 44px -18px rgba(20,20,19,.35); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+.steps li:hover .iphone { transform: translateY(-6px); }
+.step-no { font-size: 13px; font-weight: 700; letter-spacing: .1em; color: var(--peach-ink); padding-top: 14px; border-top: 2px solid var(--peach); align-self: flex-start; }
+.steps h4 { font-size: clamp(19px, 1.7vw, 24px); letter-spacing: -0.03em; margin: 8px 0 6px; }
+.steps p { color: var(--sub); font-size: 15px; margin: 0; }
+@media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 56px; } .steps .iphone { --w: min(32vw, 250px); } }
+@media (max-width: 560px) {
+  .steps { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 40px calc(var(--gutter) * -1) 0; padding: 0 var(--gutter) 12px; scroll-padding: 0 var(--gutter); }
+  .steps li { flex: 0 0 68vw; scroll-snap-align: start; }
+  .steps .iphone { --w: 54vw; }
+}
