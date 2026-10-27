@@ -259,3 +259,8 @@ footer .biz { flex-basis: 100%; width: 100%; margin: 6px 0 0; font-size: 12px; c
   .steps li { flex: 0 0 68vw; scroll-snap-align: start; }
   .steps .iphone { --w: 54vw; }
 }
+
+/* 영어·일본어 페이지: 언어 바꾸기, 일본어는 띄어쓰기가 없어 keep-all이면 줄이 안 바뀜 */
+footer .langs { flex-basis: 100%; margin: 0; }
+html:lang(ja) { --font: -apple-system, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif; }
+html:lang(ja) body { word-break: normal; line-break: strict; }

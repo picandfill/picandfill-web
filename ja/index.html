@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pic&amp;Fill - 写真1枚に思い出を書き足す記録アプリ</title>
+  <meta name="description" content="忘れやすい思い出を写真に一言で。旅行・うちの子（子ども・ペット）・日常を自分だけの記録に残して、リンクやA4 PDFで大切に保管できます。">
+  <link rel="canonical" href="https://picandfill.taegabi.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://picandfill.taegabi.com/">
+  <link rel="alternate" hreflang="en" href="https://picandfill.taegabi.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://picandfill.taegabi.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://picandfill.taegabi.com/en/">
+  <meta name="theme-color" content="#F4F2EC">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pic&amp;Fill">
+  <meta property="og:title" content="Pic&amp;Fill - 写真1枚に思い出を書き足す">
+  <meta property="og:description" content="撮る瞬間は一言、余裕があるときに書き足す自分だけの写真記録。旅行・うちの子・日常。">
+  <meta property="og:url" content="https://picandfill.taegabi.com/ja/">
+  <meta property="og:image" content="https://picandfill.taegabi.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="../assets/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Pic&Fill",
+    "alternateName": "픽앤필",
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "撮る瞬間は一言だけ。余裕があるときに写真の日時・場所で記録を書き足す、自分だけの記録アプリ。",
+    "url": "https://picandfill.taegabi.com/ja/",
+    "image": "https://picandfill.taegabi.com/assets/app-icon.png",
+    "inLanguage": ["ko", "en", "ja"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "写真の元データはサーバーにアップロードされますか？", "acceptedAnswer": { "@type": "Answer", "text": "いいえ。元データはスマホの写真アプリにそのまま残り、アプリは写真を指す情報と記録だけを保存します。リンクで共有するときだけ共有用の小さな写真をアップロードし、共有をやめると削除します。" } },
+      { "@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。写真300枚、旅行10件まで無料で記録してリンクで共有できます。もっと残したいときやPDF記録集、Googleドライブのバックアップが必要なときはPlusをどうぞ。" } },
+      { "@type": "Question", "name": "アプリを持っていない人にも見せられますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。リンクを受け取った人はアプリなしでWebブラウザで見られます。パスワードをかけたり、正確な位置を隠したりできます。" } },
+      { "@type": "Question", "name": "Androidでも使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "まずiPhoneで公開しています。Android版は準備中です。" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Pic&amp;Fill トップへ"><img src="../assets/logo.png" alt="" width="30" height="30">Pic&amp;Fill</a>
+    <nav aria-label="ページ内の移動">
+      <a href="#story">使い方</a>
+      <a href="#spaces">3つのスペース</a>
+      <a href="#plans">料金プラン</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a class="btn" data-appstore data-track="appstore_header" href="#"><span class="label">App Store</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="kicker reveal">PIC&amp;FILL</p>
+      <h1 class="reveal d1">写真1枚に<br><span class="soft">思い出を</span><br>書き足す。</h1>
+      <p class="lead reveal d2">忘れやすい思い出を一言で。<br>記録は、それくらい軽くていい。</p>
+      <div class="reveal d3">
+        <a class="btn big" data-appstore data-track="appstore_hero" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.2zM13.9 5.1c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
+          <span class="label">App Storeからダウンロード</span>
+        </a>
+        <p class="note">まずはiPhoneで · Androidは準備中</p>
+      </div>
+    </div>
+    <div class="hero-phones" data-parallax>
+      <div class="iphone tilt back reveal d2"><div class="screen"><img src="../assets/screens/03.webp" alt="保存した旅行：京都の路地の写真、日付と天気、番号ピンの地図と目次" width="660" height="1430"></div></div>
+      <div class="iphone tilt front reveal d1" style="--ry:-18deg;--rx:6deg;--rz:2deg"><div class="screen"><img src="../assets/screens/01.webp" alt="旅行ホーム：メモ付きの京都の写真一覧" width="660" height="1430"></div></div>
+    </div>
+  </section>
+
+  <section class="moments" aria-label="使用例">
+    <h2 class="display reveal">写真1枚に<br>一言がほしいとき。</h2>
+    <div class="track">
+      <div class="memo"><small>運動</small>筋トレ完了！今日は10km 🏃</div>
+      <div class="memo"><small>現場</small>1203号室 浴室タイルの不具合確認</div>
+      <div class="memo"><small>赤ちゃん</small>かわいい…けどお願い、寝て</div>
+      <div class="memo"><small>実験</small>サンプル3だけ色が変わった</div>
+      <div class="memo"><small>旅行</small>ねえ、もう歩くのやめよう</div>
+      <div class="memo"><small>友だち</small>私たち、もう20代じゃないよ？</div>
+      <div class="memo"><small>運動</small>筋トレ完了！今日は10km 🏃</div>
+      <div class="memo"><small>現場</small>1203号室 浴室タイルの不具合確認</div>
+      <div class="memo"><small>赤ちゃん</small>かわいい…けどお願い、寝て</div>
+      <div class="memo"><small>実験</small>サンプル3だけ色が変わった</div>
+      <div class="memo"><small>旅行</small>ねえ、もう歩くのやめよう</div>
+      <div class="memo"><small>友だち</small>私たち、もう20代じゃないよ？</div>
+    </div>
+    <div class="track rev">
+      <div class="memo"><small>ペット</small>のんきでいいなあ 🐱</div>
+      <div class="memo"><small>日常</small>映画館の隣のおじさん、許さない</div>
+      <div class="memo"><small>家族</small>お母さん、私もこんなに言うこと聞かなかった？</div>
+      <div class="memo"><small>ガーデニング</small>バジルの芽が3つ出た 🌱</div>
+      <div class="memo"><small>グルメ</small>次は2階の窓際の席で</div>
+      <div class="memo"><small>旅行</small>レオナルド・ダ・ヴィンチ「岩窟の聖母」</div>
+      <div class="memo"><small>日常</small>夜中にこれを食べる私を許さないで</div>
+      <div class="memo"><small>ペット</small>のんきでいいなあ 🐱</div>
+      <div class="memo"><small>日常</small>映画館の隣のおじさん、許さない</div>
+      <div class="memo"><small>家族</small>お母さん、私もこんなに言うこと聞かなかった？</div>
+      <div class="memo"><small>ガーデニング</small>バジルの芽が3つ出た 🌱</div>
+      <div class="memo"><small>グルメ</small>次は2階の窓際の席で</div>
+      <div class="memo"><small>旅行</small>レオナルド・ダ・ヴィンチ「岩窟の聖母」</div>
+      <div class="memo"><small>日常</small>夜中にこれを食べる私を許さないで</div>
+    </div>
+  </section>
+
+  <section class="story" id="story" aria-label="Pic&amp;Fillの使い方">
+    <div class="story-stage">
+      <div class="story-text">
+        <div class="story-step on" style="--accent:var(--peach-ink)"><span class="num">01 · すばやく簡単にメモ</span><h2 class="display">一言で十分。<br><span class="soft">自分にはわかるから。</span></h2><p>撮ってすぐメモしてもいいし、ひとまずスルーしても大丈夫。記録のペースはあなたが決めます。</p></div>
+        <div class="story-step" style="--accent:var(--travel)"><span class="num">02 · 写真を記録に</span><h2 class="display">写真を撮った理由は<br><span class="soft">写真の中にないから。</span></h2><p>写真を集めて自分だけの旅行を作れます。旅行が集まれば旅程になります。</p></div>
+        <div class="story-step" style="--accent:var(--peach-ink)"><span class="num">03 · うちの子</span><h2 class="display">もう一度見たいのは<br><span class="soft">特別な日だけじゃないから。</span></h2><p>うちの子と過ごす瞬間と自分の気持ちを、1週間に1枚でまとめます。毎日書くのは大変ですから。</p></div>
+        <div class="story-step" style="--accent:var(--navy)"><span class="num">04 · 何気ない日常</span><h2 class="display">メモが必要なとき、<br><span class="soft">ちょっとだけお邪魔します。</span></h2><p>大げさなことはいりません。写真にメモがほしいときに書くだけ。それでも便利な機能はそろっています。</p></div>
+        <div class="story-step" style="--accent:var(--gold)"><span class="num">05 · 残す</span><h2 class="display">オフラインの記録集。<br><span class="soft">保管はアナログがいい。</span></h2><p>心をこめて作った自分だけの記録をA4 PDFで受け取れます。もちろんリンクでシェアもできます。</p></div>
+      </div>
+      <div class="story-phone">
+        <div class="iphone tilt" data-story-phone style="--ry:-14deg;--rx:5deg;--rz:2deg">
+          <div class="screen">
+            <img class="on" src="../assets/screens/02.webp" alt="写真を撮った直後に一言メモを書く画面" width="660" height="1430">
+            <img src="../assets/screens/03.webp" alt="" width="660" height="1430" loading="lazy">
+            <img src="../assets/screens/04.webp" alt="うちの子の週のまとめ：猫の写真7枚" width="660" height="1430" loading="lazy">
+            <img src="../assets/screens/05.webp" alt="日常ノート：リンク・動画・場所・写真をまとめたノート" width="660" height="1430" loading="lazy">
+            <img src="../assets/screens/06.webp" alt="PDFで残す画面：表紙と目次" width="660" height="1430" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="story-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </section>
+
+  <section class="spaces" id="spaces">
+    <div class="head">
+      <h2 class="display reveal">3つの、<br>自分だけのスペース。</h2>
+      <p class="reveal d1">スペースごとに写真を分けて集めます。スペースの切り替えも簡単です。</p>
+    </div>
+    <div class="fan">
+      <figure class="f1 reveal"><div class="iphone tilt"><div class="screen"><img src="../assets/screens/travel.webp" alt="旅行スペース：清水寺の書き足しと写真" width="660" height="1430" loading="lazy"></div></div>
+        <figcaption><b class="dot-travel">旅行</b><span>1日はブログのように、何日かは旅程に</span></figcaption></figure>
+      <figure class="f2 reveal d1"><div class="iphone tilt"><div class="screen"><img src="../assets/screens/04.webp" alt="うちの子スペースの週のまとめ" width="660" height="1430" loading="lazy"></div></div>
+        <figcaption><b class="dot-half">うちの子</b><span>子ども・ペットの1週間</span></figcaption></figure>
+      <figure class="f3 reveal d2"><div class="iphone tilt"><div class="screen"><img src="../assets/screens/05.webp" alt="日常スペースの日常ノート" width="660" height="1430" loading="lazy"></div></div>
+        <figcaption><b class="dot-daily">日常</b><span>リンク・場所・動画・写真をひとつのノートに</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="samples" id="samples">
+    <div class="wrap">
+      <h2 class="display reveal">こんなふうに<br><span class="soft">残せます。</span></h2>
+      <p class="samples-lead reveal d1">京都旅行の1日をPic&amp;Fillで残した実際の例です（韓国語）。タップして見てみてください。</p>
+      <div class="sample-grid">
+        <a class="sample-card reveal" href="../assets/sample/picandfill-kyoto.pdf" target="_blank" rel="noopener" data-track="sample_pdf">
+          <div class="paper-stack" aria-hidden="true">
+            <img class="p3" src="../assets/sample/pdf5.webp" alt="" width="600" height="849" loading="lazy">
+            <img class="p2" src="../assets/sample/pdf3.webp" alt="" width="600" height="849" loading="lazy">
+            <img class="p1" src="../assets/sample/pdf1.webp" alt="" width="600" height="849" loading="lazy">
+          </div>
+          <div class="sample-text"><span class="num">PDF</span><h3>A4記録集</h3><p>表紙、目次、場所ごとの写真と文章 · 12ページ</p><span class="go">PDFを開く ↗</span></div>
+        </a>
+        <a class="sample-card dark reveal d1" href="https://picandfill.web.app/s/jlXsuRmwK4Yz7LydBmc1lw" target="_blank" rel="noopener" data-track="sample_link">
+          <div class="sample-phone"><div class="iphone tilt"><div class="screen"><img src="../assets/sample/link.webp" alt="共有リンクで開いた京都旅行のWebページ" width="660" height="1430" loading="lazy"></div></div></div>
+          <div class="sample-text"><span class="num">LINK</span><h3>アプリなしで見られるリンク</h3><p>受け取った人はWebで見られます · 地図と写真、目次まで</p><span class="go">リンクを開く ↗</span></div>
+        </a>
+      </div>
+
+      <div class="steps-head reveal">
+        <span class="num dot-half">HALF · 4 STEPS</span>
+        <h3>うちの子はこう使います。</h3>
+        <p>歩き始めたハユルの1週間です。</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <div class="iphone"><div class="screen"><img src="../assets/half/01.webp" alt="うちの子ホーム：日付ごとに集まった写真と一言メモ" width="660" height="1434" loading="lazy"></div></div>
+          <span class="step-no">01</span><h4>撮るときは一言だけ</h4>
+          <p>真ん中のカメラで撮って短く書きます。写真は日付ごとに集まります。</p>
+        </li>
+        <li class="reveal d1">
+          <div class="iphone"><div class="screen"><img src="../assets/half/02.webp" alt="週のまとめを書く：空いている曜日の枠7つ" width="660" height="1434" loading="lazy"></div></div>
+          <span class="step-no">02</span><h4>週末は週のまとめ</h4>
+          <p>下の「週のまとめ」をタップすると曜日の枠が7つ開きます。写真を枠にドラッグします。</p>
+        </li>
+        <li class="reveal d2">
+          <div class="iphone"><div class="screen"><img src="../assets/half/03.webp" alt="曜日ごとに写真とメモが入った週のまとめ" width="660" height="1434" loading="lazy"></div></div>
+          <span class="step-no">03</span><h4>1週間を埋める</h4>
+          <p>「日付どおりに入れる」なら一度に入ります。星マークで特別な日を選びます。</p>
+        </li>
+        <li class="reveal d3">
+          <div class="iphone"><div class="screen"><img src="../assets/half/04.webp" alt="完成した1週間：曜日の写真、体重、特別な記録" width="660" height="1434" loading="lazy"></div></div>
+          <span class="step-no">04</span><h4>1枚で完成</h4>
+          <p>体重・健康状態と特別な記録がひとつの画面に集まります。リンクやPDFでシェアします。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <h2 class="display reveal" style="margin-bottom:56px">少なく書いて、<br>長く残す。</h2>
+      <div class="feature-list">
+        <div class="feature-row reveal"><h3>写真が覚えている情報</h3><p>撮った時間と場所から、日付・場所・天気を書き足します。</p></div>
+        <div class="feature-row reveal"><h3>アプリなしで見られるリンク</h3><p>受け取った人はWebで見られます。パスワード、共有期間、正確な位置を隠すかは自分で決めます。</p></div>
+        <div class="feature-row reveal"><h3>A4 PDF書き出し</h3><p>表紙と目次のある記録集として保存・印刷できます。</p></div>
+        <div class="feature-row reveal"><h3>忘れないようにお知らせ</h3><p>夜9時には書き忘れたメモを、1年後にはその日の思い出をお知らせします。</p></div>
+        <div class="feature-row reveal"><h3>自分だけの保管場所</h3><p>元の写真はそのまま、Googleドライブの自分のフォルダにバックアップします。</p></div>
+        <div class="feature-row reveal"><h3>ダークモード</h3><p>スマホのテーマに合わせて自動で切り替わります。</p></div>
+        <div class="feature-row reveal"><h3>한국어 · English · 日本語</h3><p>3つの言語に対応しています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <div class="wrap">
+      <h2 class="display reveal">無料で始めて、<br><span style="color:#B6B2A8">必要なときにPlus。</span></h2>
+      <div class="plan-grid">
+        <div class="plan reveal">
+          <h3>無料</h3>
+          <p class="tag">気軽に記録</p>
+          <ul>
+            <li>写真300枚 · 旅行10件</li>
+            <li>旅行1件に写真20枚</li>
+            <li>地図プレビュー</li>
+            <li>うちの子1人 · 自分だけのカテゴリ3つ</li>
+            <li>基本テキストエディタ</li>
+            <li>場所情報をリンクで共有</li>
+          </ul>
+        </div>
+        <div class="plan plus reveal d1">
+          <h3>Plus ✦</h3>
+          <p class="tag">もっと自由に、長く残す</p>
+          <ul>
+            <li>旅行・写真が無制限</li>
+            <li>旅行1件の写真も無制限</li>
+            <li>大きな地図 · 移動ルート</li>
+            <li>うちの子最大5人 · カテゴリ無制限</li>
+            <li>Markdownテキストエディタ</li>
+            <li>リンク共有に加えてA4 PDF書き出し</li>
+            <li>Googleドライブのバックアップ · Face IDロック</li>
+            <li>広告なし · 期限なしのリンク共有</li>
+          </ul>
+        </div>
+      </div>
+      <p class="plan-note reveal">無料でも広告を見れば、旅行1件に写真を最大30枚まで追加し、Markdownエディタと全文共有を使えます。</p>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2 class="display reveal">よくある質問。</h2>
+      <p class="reveal" style="margin:12px 0 0"><a href="faq">もっと見る →</a></p>
+      <details><summary>写真の元データはサーバーにアップロードされますか？</summary><p>いいえ。元データはスマホの写真アプリにそのまま残り、アプリは写真を指す情報と記録だけを保存します。リンクで共有するときだけ共有用の小さな写真をアップロードし、共有をやめると削除します。</p></details>
+      <details><summary>無料で使えますか？</summary><p>はい。写真300枚、旅行10件まで無料で記録してリンクで共有できます。もっと残したいときやPDF記録集、Googleドライブのバックアップが必要なときはPlusをどうぞ。</p></details>
+      <details><summary>アプリを持っていない人にも見せられますか？</summary><p>はい。リンクを受け取った人はアプリなしでWebブラウザで見られます。パスワードをかけたり、正確な位置を隠したりできます。</p></details>
+      <details><summary>スマホを買い替えたら記録はどうなりますか？</summary><p>前と同じGoogleまたはAppleアカウントでログインすれば、記録はそのまま残っています。PlusのGoogleドライブのバックアップを使えば、新しいスマホでも写真が見られます。</p></details>
+      <details><summary>Androidでも使えますか？</summary><p>まずiPhoneで公開しています。Android版は準備中です。</p></details>
+      <details><summary>記録を書き出したり削除したりできますか？</summary><p>はい。設定から記録全体をファイルに書き出したり、アカウントと記録をまとめて削除したりできます。</p></details>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="display reveal">今日撮った写真に、<br><span class="soft">一言。</span></h2>
+    <p class="reveal d1">小さな記録が積み重なって、自分だけの物語に。</p>
+    <a class="btn big reveal d2" data-appstore data-track="appstore_bottom" href="#"><span class="label">App Storeからダウンロード</span></a>
+    <div class="peek reveal d2"><div class="iphone tilt"><div class="screen"><img src="../assets/screens/02.webp" alt="" width="660" height="1430" loading="lazy"></div></div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="./" class="brand" style="font-size:15px"><img src="../assets/logo.png" alt="" width="24" height="24" style="width:24px;height:24px">Pic&amp;Fill</a>
+    <a href="privacy" data-track="privacy">プライバシーポリシー</a>
+    <a href="terms" data-track="terms">利用規約</a>
+    <a href="faq">よくある質問</a><a href="mailto:picandfill@taegabi.com">picandfill@taegabi.com</a><span class="copy">© 2026 Taegabi Studio</span>
+    <p class="langs"><a href="../">한국어</a> · <a href="../en/">English</a> · <a href="./">日本語</a></p>
+  <p class="biz">Taegabi Studio (태가비 스튜디오) · CEO 이현배 · Business registration 510-22-54285 · Mail-order business registration 2026-화성동탄-3374 · 801-253A, 36 Dongtanjungsimsangga 1-gil, Dongtan-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea · picandfill@taegabi.com</p></div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
