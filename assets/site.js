@@ -2,7 +2,7 @@
 
 // ▼ 여기 두 곳만 채우면 됨 (README 참고)
 const GA_ID = 'G-9KE590DBGT';            // Google Analytics 측정 ID, 예: 'G-XXXXXXXXXX' (비어 있으면 통계 끔)
-const APP_STORE_URL = '';    // 출시 후 'https://apps.apple.com/app/id0000000000' (비어 있으면 "출시 준비 중")
+const APP_STORE_URL = 'https://apps.apple.com/app/id6824755586';
 
 if (GA_ID) {
   const s = document.createElement('script');
