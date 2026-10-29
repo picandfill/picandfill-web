@@ -105,3 +105,25 @@ if (hero && !still && matchMedia('(hover: hover)').matches) {
     });
   }, { passive: true });
 }
+
+// 세 공간: 눌러서 그 공간의 4단계 펼치기 (늘 하나만, 화살표 키로도 이동)
+const tabs = [...document.querySelectorAll('.space-tab')];
+const pick = (t) => tabs.forEach((x) => {
+  const on = x === t;
+  x.setAttribute('aria-selected', on);
+  x.tabIndex = on ? 0 : -1;
+  document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+});
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => pick(t));
+  t.addEventListener('keydown', (e) => {
+    const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); }
+  });
+});
+
+// 교토 예시: 화살표로 넘기기
+const reel = document.querySelector('.reel');
+document.querySelectorAll('[data-reel]').forEach((b) => b.addEventListener('click', () => {
+  reel.scrollBy({ left: Number(b.dataset.reel) * reel.clientWidth * 0.6, behavior: still ? 'auto' : 'smooth' });
+}));
