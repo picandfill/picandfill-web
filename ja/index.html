@@ -50,7 +50,7 @@
       { "@type": "Question", "name": "写真の元データはサーバーにアップロードされますか？", "acceptedAnswer": { "@type": "Answer", "text": "いいえ。元データはスマホの写真アプリにそのまま残り、アプリは写真を指す情報と記録だけを保存します。リンクで共有するときだけ共有用の小さな写真をアップロードし、共有をやめると削除します。" } },
       { "@type": "Question", "name": "無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。写真300枚、旅行10件まで無料で記録してリンクで共有できます。もっと残したいときやPDF記録集、Googleドライブのバックアップが必要なときはPlusをどうぞ。" } },
       { "@type": "Question", "name": "アプリを持っていない人にも見せられますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。リンクを受け取った人はアプリなしでWebブラウザで見られます。パスワードをかけたり、正確な位置を隠したりできます。" } },
-      { "@type": "Question", "name": "Androidでも使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "まずiPhoneで公開しています。Android版は準備中です。" } }
+      { "@type": "Question", "name": "Androidでも使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、Google Playからダウンロードできます。" } }
     ]
   }
   </script>
@@ -78,11 +78,17 @@
       <h1 class="reveal d1">写真1枚に<br><span class="soft">思い出を</span><br>書き足す。</h1>
       <p class="lead reveal d2">忘れやすい思い出を一言で。<br>記録は、それくらい軽くていい。</p>
       <div class="reveal d3">
+        <div class="stores">
         <a class="btn big" data-appstore data-track="appstore_hero" href="#">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.5 2-3.7 2.1-3.8-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.2zM13.9 5.1c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.5z"/></svg>
           <span class="label">App Storeからダウンロード</span>
         </a>
-        <p class="note">まずはiPhoneで · Androidは準備中</p>
+        <a class="btn big" data-track="play_hero" href="https://play.google.com/store/apps/details?id=com.taegabi.picandfill">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2c-.3.3-.4.7-.4 1.2v17.2c0 .5.1.9.4 1.2l9.7-9.8-9.7-9.8zm10.8 10.9 2.7 2.7-11.3 6.5 8.6-9.2zm3.9-3.8 3 1.7c.9.5.9 1.4 0 1.9l-3 1.7-3-3 3-2.3zM5.8 1.7l11.3 6.5-2.7 2.7-8.6-9.2z"/></svg>
+          <span class="label">Google Playで手に入れよう</span>
+        </a>
+        </div>
+        <p class="note">iPhone · Android</p>
       </div>
     </div>
     <div class="hero-stage" data-parallax>
@@ -290,7 +296,7 @@
       <details><summary>無料で使えますか？</summary><p>はい。写真300枚、旅行10件まで無料で記録してリンクで共有できます。もっと残したいときやPDF記録集、Googleドライブのバックアップが必要なときはPlusをどうぞ。</p></details>
       <details><summary>アプリを持っていない人にも見せられますか？</summary><p>はい。リンクを受け取った人はアプリなしでWebブラウザで見られます。パスワードをかけたり、正確な位置を隠したりできます。</p></details>
       <details><summary>スマホを買い替えたら記録はどうなりますか？</summary><p>前と同じGoogleまたはAppleアカウントでログインすれば、記録はそのまま残っています。PlusのGoogleドライブのバックアップを使えば、新しいスマホでも写真が見られます。</p></details>
-      <details><summary>Androidでも使えますか？</summary><p>まずiPhoneで公開しています。Android版は準備中です。</p></details>
+      <details><summary>Androidでも使えますか？</summary><p>はい、Google Playからダウンロードできます。</p></details>
       <details><summary>記録を書き出したり削除したりできますか？</summary><p>はい。設定から記録全体をファイルに書き出したり、アカウントと記録をまとめて削除したりできます。</p></details>
       </div></div>
     </div>
@@ -302,7 +308,10 @@
       <img class="icon reveal" src="../assets/app-icon.png" alt="" width="88" height="88">
       <h2 class="display reveal d1">今日撮った写真に、一言。</h2>
       <p class="reveal d1">小さな記録が積み重なって、自分だけの物語に。</p>
-      <a class="btn big light reveal d2" data-appstore data-track="appstore_bottom" href="#"><span class="label">App Storeからダウンロード</span></a>
+      <div class="stores reveal d2">
+      <a class="btn big light" data-appstore data-track="appstore_bottom" href="#"><span class="label">App Storeからダウンロード</span></a>
+      <a class="btn big light" data-track="play_bottom" href="https://play.google.com/store/apps/details?id=com.taegabi.picandfill"><span class="label">Google Playで手に入れよう</span></a>
+      </div>
     </div>
   </section>
 </main>

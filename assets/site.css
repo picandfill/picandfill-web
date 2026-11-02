@@ -27,6 +27,8 @@ a { color: inherit; }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.18); }
 .btn.big { padding: 17px 30px; font-size: 17px; }
 .btn svg { width: 20px; height: 20px; fill: currentColor; }
+.stores { display: flex; flex-wrap: wrap; gap: 10px; }
+.cta-in .stores { justify-content: center; }
 .btn.soon { background: #3C3B37; cursor: default; }
 .btn.soon:hover { transform: none; box-shadow: none; }
 
