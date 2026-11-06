@@ -73,7 +73,6 @@ if (story) {
   const steps = story.querySelectorAll('.story-step');
   const shots = story.querySelectorAll('.story-phone .screen img');
   const dots = story.querySelectorAll('.story-dots i');
-  const phone = story.querySelector('[data-story-phone]');
   let current = 0;
   const update = () => {
     const r = story.getBoundingClientRect();
@@ -83,44 +82,37 @@ if (story) {
       [steps, shots, dots].forEach((list) => list.forEach((el, k) => el.classList.toggle('on', k === i)));
       current = i;
     }
-    if (!still && phone) {
-      const f = p * steps.length - i; // 이 단계 안에서 0 → 1
-      phone.style.setProperty('--ry', `${-20 + f * 16}deg`);
-      phone.style.setProperty('--rx', `${7 - f * 4}deg`);
-    }
   };
   addEventListener('scroll', update, { passive: true });
   update();
 }
 
-// 첫 화면 아이폰: 마우스를 따라 살짝 기울어짐 (터치 기기 제외)
-const hero = document.querySelector('[data-parallax]');
-if (hero && !still && matchMedia('(hover: hover)').matches) {
-  const phones = [...hero.querySelectorAll('.iphone')].map((el) => ({ el, ry: parseFloat(getComputedStyle(el).getPropertyValue('--ry')) || -18, rx: parseFloat(getComputedStyle(el).getPropertyValue('--rx')) || 6 }));
-  addEventListener('pointermove', (e) => {
-    const x = e.clientX / innerWidth - 0.5, y = e.clientY / innerHeight - 0.5;
-    phones.forEach(({ el, ry, rx }) => {
-      el.style.setProperty('--ry', `${ry + x * 12}deg`);
-      el.style.setProperty('--rx', `${rx - y * 8}deg`);
-    });
+// 세 공간: 단계를 누르면 폰 화면이 바뀜. 휴대폰에선 옆으로 밀어도 바뀜
+document.querySelectorAll('.chapter').forEach((ch) => {
+  const list = ch.querySelector('.ch-steps');
+  const btns = [...list.querySelectorAll('button')];
+  const shots = ch.querySelectorAll('.screen img');
+  const show = (i) => {
+    btns.forEach((b, k) => (k === i ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current')));
+    shots.forEach((s, k) => s.classList.toggle('on', k === i));
+  };
+  btns.forEach((b, i) => b.addEventListener('click', () => show(i)));
+  list.addEventListener('scroll', () => {
+    if (list.scrollWidth <= list.clientWidth) return;
+    const w = list.children[0].offsetWidth + 12;
+    show(Math.min(Math.round(list.scrollLeft / w), btns.length - 1));
   }, { passive: true });
-}
+});
 
-// 세 공간: 눌러서 그 공간의 4단계 펼치기 (늘 하나만, 화살표 키로도 이동)
-const tabs = [...document.querySelectorAll('.space-tab')];
-const pick = (t) => tabs.forEach((x) => {
-  const on = x === t;
-  x.setAttribute('aria-selected', on);
-  x.tabIndex = on ? 0 : -1;
-  document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
-});
-tabs.forEach((t, i) => {
-  t.addEventListener('click', () => pick(t));
-  t.addEventListener('keydown', (e) => {
-    const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
-    if (d) { const n = tabs[(i + d + tabs.length) % tabs.length]; pick(n); n.focus(); }
-  });
-});
+// 책처럼 읽기: 화면에 들어올 때 한 번 넘김 (4초, 반복 없음). 움직임 줄이기면 멈춘 그림, 버튼으로만 재생
+const curl = document.querySelector('[data-curl]');
+if (curl) {
+  const replay = () => { curl.currentTime = 0; curl.play().catch(() => {}); };
+  document.querySelector('[data-replay]').addEventListener('click', replay);
+  if (!still) new IntersectionObserver((es, o) => {
+    if (es[0].isIntersecting) { replay(); o.disconnect(); }
+  }, { threshold: 0.6 }).observe(curl);
+}
 
 // 교토 예시: 화살표로 넘기기
 const reel = document.querySelector('.reel');

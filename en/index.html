@@ -77,7 +77,6 @@
 <main>
   <section class="hero">
     <div>
-      <p class="kicker reveal">PIC&amp;FILL</p>
       <h1 class="reveal d1">Fill each photo<br><span class="soft">with a</span> memory.</h1>
       <p class="lead reveal d2">Write one line before you forget.<br>A light record is enough.</p>
       <div class="reveal d3">
@@ -94,10 +93,10 @@
         <p class="note">iPhone · Android</p>
       </div>
     </div>
-    <div class="hero-stage" data-parallax>
+    <div class="hero-stage">
       <figure class="big reveal"><img src="../assets/photo/temple.webp" alt="The green roofs of Heian Shrine in Kyoto" width="1040" height="1000" fetchpriority="high">
         <figcaption><b>Travel · Kyoto</b>Heian Shrine, under a blue sky<small>Aug 17, 9:02 AM · Sakyo, Kyoto</small></figcaption></figure>
-      <div class="iphone tilt reveal d1" style="--ry:-14deg;--rx:5deg;--rz:2deg"><div class="screen"><img src="../assets/en/screens/02.webp" alt="Writing a one-line note right after taking a photo" width="660" height="1430"></div></div>
+      <div class="iphone reveal d1"><div class="screen"><img src="../assets/en/travel/01.webp" alt="Writing a one-line note right after taking a photo" width="660" height="1430"></div></div>
       <figure class="polaroid reveal d2"><img src="../assets/photo/baby.webp" alt="A toddler standing on the grass" width="400" height="300"><figcaption>The week three steps became ten</figcaption></figure>
     </div>
   </section>
@@ -139,14 +138,14 @@
   <section class="story" id="story" aria-label="How Pic&amp;Fill works">
     <div class="story-stage">
       <div class="story-text">
-        <div class="story-step on" style="--accent:var(--peach-ink)"><span class="num">01 · Quick notes</span><h2 class="display">One line is enough.<br><span class="soft">You'll know what it means.</span></h2><p>Write a note right after you take a photo, or skip it for now. You set the pace.</p></div>
-        <div class="story-step" style="--accent:var(--travel)"><span class="num">02 · Photos into records</span><h2 class="display">Why you took the photo<br><span class="soft">isn't in the photo.</span></h2><p>Gather photos into your own trip. Trips can grow into a journey.</p></div>
-        <div class="story-step" style="--accent:var(--peach-ink)"><span class="num">03 · Your Half</span><h2 class="display">The days worth seeing again<br><span class="soft">aren't only the big ones.</span></h2><p>Moments with your kid or pet, and how you felt, on one page a week. Writing every day is hard for us too.</p></div>
-        <div class="story-step" style="--accent:var(--navy)"><span class="num">04 · Everyday life</span><h2 class="display">When you need a note,<br><span class="soft">it's right here.</span></h2><p>Nothing fancy. Write when a photo needs a note. All the useful tools are still there.</p></div>
-        <div class="story-step" style="--accent:var(--gold)"><span class="num">05 · Keep it</span><h2 class="display">An offline book.<br><span class="soft">Some things belong on paper.</span></h2><p>Save the records you made with care as an A4 PDF. Or share them by link.</p></div>
+        <div class="story-step on" style="--accent:var(--peach-ink)"><span class="num">Quick notes</span><h2 class="display">One line is enough.<br><span class="soft">You'll know what it means.</span></h2><p>Write a note right after you take a photo, or skip it for now. You set the pace.</p></div>
+        <div class="story-step" style="--accent:var(--travel)"><span class="num">Photos into records</span><h2 class="display">Why you took the photo<br><span class="soft">isn't in the photo.</span></h2><p>Gather photos into your own trip. Trips can grow into a journey.</p></div>
+        <div class="story-step" style="--accent:var(--peach-ink)"><span class="num">Your Half</span><h2 class="display">The days worth seeing again<br><span class="soft">aren't only the big ones.</span></h2><p>Moments with your kid or pet, and how you felt, on one page a week. Writing every day is hard for us too.</p></div>
+        <div class="story-step" style="--accent:var(--navy)"><span class="num">Everyday life</span><h2 class="display">When you need a note,<br><span class="soft">it's right here.</span></h2><p>Nothing fancy. Write when a photo needs a note. All the useful tools are still there.</p></div>
+        <div class="story-step" style="--accent:var(--gold)"><span class="num">Keep it</span><h2 class="display">An offline book.<br><span class="soft">Some things belong on paper.</span></h2><p>Save the records you made with care as an A4 PDF. Or share them by link.</p></div>
       </div>
       <div class="story-phone">
-        <div class="iphone tilt" data-story-phone style="--ry:-14deg;--rx:5deg;--rz:2deg">
+        <div class="iphone">
           <div class="screen">
             <img class="on" src="../assets/en/screens/home.webp" alt="Travel photos: every photo has a one-line note" width="660" height="1434">
             <img src="../assets/en/screens/03.webp" alt="" width="660" height="1430" loading="lazy">
@@ -160,58 +159,95 @@
     </div>
   </section>
 
-  <section class="spaces" id="spaces">
-    <div class="wrap">
-      <div class="head-row">
-        <h2 class="display reveal">Three spaces,<br><span class="soft">all your own.</span></h2>
-        <p class="reveal d1">Tap a space to see how it works in four steps.</p>
-      </div>
-      <div class="space-tabs reveal" role="tablist" aria-label="Three spaces">
-        <button class="space-tab tab-travel" role="tab" id="tab-travel" aria-controls="panel-travel" aria-selected="true" data-track="space_travel">
-          <img src="../assets/photo/pagoda.webp" alt="" width="72" height="72"><span><small>TRAVEL</small><b>Travel</b><em>A day like a blog post, many days as a journey</em></span></button>
-        <button class="space-tab tab-half" role="tab" id="tab-half" aria-controls="panel-half" aria-selected="false" tabindex="-1" data-track="space_half">
-          <img src="../assets/photo/baby.webp" alt="" width="72" height="72"><span><small>HALF</small><b>Half</b><em>A week with your kid or pet</em></span></button>
-        <button class="space-tab tab-daily" role="tab" id="tab-daily" aria-controls="panel-daily" aria-selected="false" tabindex="-1" data-track="space_daily">
-          <img src="../assets/photo/coffee.webp" alt="" width="72" height="72"><span><small>DAILY</small><b>Daily</b><em>Links, places, videos and photos in one note</em></span></button>
-      </div>
-      <div class="space-panel panel-travel" role="tabpanel" id="panel-travel" aria-labelledby="tab-travel">
-        <h3>How Travel works.</h3><p>A day in Florence.</p>
-        <ol class="steps">
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/travel/01.webp" alt="Writing a one-line note on a Florence photo" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">01</span><h4>One line when you snap</h4><p>Snap and write one line. The photo knows the time and place.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/travel/02.webp" alt="Editing a place: title, place, purpose, rating, hashtags, story" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">02</span><h4>Fill in each place</h4><p>Title, purpose, rating, hashtags and story. Places are suggested from photo locations.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/travel/03.webp" alt="A Florence trip: weather, spending and three places" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">03</span><h4>A day becomes a trip</h4><p>Your places line up in time order, with weather and spending.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/travel/04.webp" alt="A saved Florence trip: map with numbered pins, contents, share and PDF buttons" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">04</span><h4>Map and contents</h4><p>Look back with a map and contents, and share by link or PDF.</p></li>
+    <section class="spaces" id="spaces">
+    <div class="wrap spaces-head">
+      <h2 class="display reveal">Three spaces,<br><span class="soft">all your own.</span></h2>
+      <p class="reveal d1">The space you pick when you take a photo shapes how the record looks.</p>
+    </div>
+    <article class="chapter ch-travel" aria-labelledby="ch-travel">
+      <div class="ch-copy">
+        <h3 id="ch-travel">Travel</h3>
+        <p class="ch-line">A day like a blog post, many days as a journey</p>
+        <ol class="ch-steps" aria-label="How it works">
+          <li><button type="button" aria-current="true" data-track="space_travel_1"><b>One line when you snap</b><span>Snap and write one line. The photo knows the time and place.</span></button></li>
+          <li><button type="button" data-track="space_travel_2"><b>Fill in each place</b><span>Title, purpose, rating, hashtags and story. Places are suggested from photo locations.</span></button></li>
+          <li><button type="button" data-track="space_travel_3"><b>A day becomes a trip</b><span>Your places line up in time order, with weather and spending.</span></button></li>
+          <li><button type="button" data-track="space_travel_4"><b>Map and contents</b><span>Look back with a map and contents, and share by link or PDF.</span></button></li>
         </ol>
       </div>
-      <div class="space-panel panel-half" role="tabpanel" id="panel-half" aria-labelledby="tab-half" hidden>
-        <h3>How Half works.</h3><p>A week of Hayul, who just learned to walk.</p>
-        <ol class="steps">
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/half/01.webp" alt="Half home: photos and one-line notes grouped by date" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">01</span><h4>One line when you snap</h4><p>Shoot with the center camera and write a short note. Photos are grouped by date.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/half/02.webp" alt="Writing a weekly summary: seven empty day slots" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">02</span><h4>A weekly summary on weekends</h4><p>Tap 'Weekly' at the bottom to open seven day slots. Drag photos into them.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/half/03.webp" alt="A weekly summary with photos and notes for each day" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">03</span><h4>Fill the week</h4><p>'Fill by date' puts them all in at once. Star the special days.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/half/04.webp" alt="A finished week: daily photos, weight and special notes" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">04</span><h4>One page, done</h4><p>Weight, health and special notes come together on one screen. Share by link or PDF.</p></li>
+      <div class="ch-visual">
+        <img class="ch-photo" src="../assets/photo/ch-travel.webp" alt="Florence Cathedral at the end of an alley" loading="lazy">
+        <div class="iphone"><div class="screen">
+            <img class="on" src="../assets/en/travel/01.webp" alt="Writing a one-line note on a Florence photo" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/travel/02.webp" alt="Editing a place: title, place, purpose, rating, hashtags, story" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/travel/03.webp" alt="A Florence trip: weather, spending and three places" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/travel/04.webp" alt="A saved Florence trip: map with numbered pins, contents, share and PDF buttons" width="660" height="1434" loading="lazy">
+        </div></div>
+      </div>
+    </article>
+    <article class="chapter ch-half" aria-labelledby="ch-half">
+      <div class="ch-copy">
+        <h3 id="ch-half">Half</h3>
+        <p class="ch-line">A week with your kid or pet</p>
+        <ol class="ch-steps" aria-label="How it works">
+          <li><button type="button" aria-current="true" data-track="space_half_1"><b>One line when you snap</b><span>Shoot with the center camera and write a short note. Photos are grouped by date.</span></button></li>
+          <li><button type="button" data-track="space_half_2"><b>A weekly summary on weekends</b><span>Tap 'Weekly' at the bottom to open seven day slots. Drag photos into them.</span></button></li>
+          <li><button type="button" data-track="space_half_3"><b>Fill the week</b><span>'Fill by date' puts them all in at once. Star the special days.</span></button></li>
+          <li><button type="button" data-track="space_half_4"><b>One page, done</b><span>Weight, health and special notes come together on one screen. Share by link or PDF.</span></button></li>
         </ol>
       </div>
-      <div class="space-panel panel-daily" role="tabpanel" id="panel-daily" aria-labelledby="tab-daily" hidden>
-        <h3>How Daily works.</h3><p>A monstera you have been growing.</p>
-        <ol class="steps">
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/daily/01.webp" alt="Daily home: photos grouped by date" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">01</span><h4>Saved by date</h4><p>Photos and one-line notes pile up by date.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/daily/02.webp" alt="A daily note: monstera growth diary with four photos" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">02</span><h4>Gather them in one note</h4><p>Pick a few photos and write a little. That's a daily note.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/daily/03.webp" alt="A daily note with bakery photos and places" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">03</span><h4>Places, too</h4><p>Add a shop or spot to a note and open it on a map.</p></li>
-          <li><div class="iphone"><div class="screen"><img src="../assets/en/daily/04.webp" alt="Notes sorted by category" width="660" height="1434" loading="lazy"></div></div>
-            <span class="step-no">04</span><h4>Sort by category</h4><p>Gather notes by your own categories, like Gardening or Workout.</p></li>
+      <div class="ch-visual">
+        <img class="ch-photo" src="../assets/photo/ch-half.webp" alt="A toddler learning to walk in the living room" loading="lazy">
+        <div class="iphone"><div class="screen">
+            <img class="on" src="../assets/en/half/01.webp" alt="Half home: photos and one-line notes grouped by date" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/half/02.webp" alt="Writing a weekly summary: seven empty day slots" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/half/03.webp" alt="A weekly summary with photos and notes for each day" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/half/04.webp" alt="A finished week: daily photos, weight and special notes" width="660" height="1434" loading="lazy">
+        </div></div>
+      </div>
+    </article>
+    <article class="chapter ch-daily" aria-labelledby="ch-daily">
+      <div class="ch-copy">
+        <h3 id="ch-daily">Daily</h3>
+        <p class="ch-line">Links, places, videos and photos in one note</p>
+        <ol class="ch-steps" aria-label="How it works">
+          <li><button type="button" aria-current="true" data-track="space_daily_1"><b>Saved by date</b><span>Photos and one-line notes pile up by date.</span></button></li>
+          <li><button type="button" data-track="space_daily_2"><b>Gather them in one note</b><span>Pick a few photos and write a little. That's a daily note.</span></button></li>
+          <li><button type="button" data-track="space_daily_3"><b>Places, too</b><span>Add a shop or spot to a note and open it on a map.</span></button></li>
+          <li><button type="button" data-track="space_daily_4"><b>Sort by category</b><span>Gather notes by your own categories, like Gardening or Workout.</span></button></li>
         </ol>
+      </div>
+      <div class="ch-visual">
+        <img class="ch-photo" src="../assets/photo/ch-daily.webp" alt="Two buns and an iced latte" loading="lazy">
+        <div class="iphone"><div class="screen">
+            <img class="on" src="../assets/en/daily/01.webp" alt="Daily home: photos grouped by date" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/daily/02.webp" alt="A daily note: monstera growth diary with four photos" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/daily/03.webp" alt="A daily note with bakery photos and places" width="660" height="1434" loading="lazy">
+            <img src="../assets/en/daily/04.webp" alt="Notes sorted by category" width="660" height="1434" loading="lazy">
+        </div></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- 1.0.4: 책처럼 읽기. 영상은 시연 데이터로 찍은 실제 앱 화면 -->
+  <section class="book" id="book">
+    <div class="wrap book-in">
+      <div class="book-copy">
+        <h2 class="display reveal">Now it reads like a book.</h2>
+        <p class="book-lead reveal d1">Swipe sideways and the page turns like paper. In your records, online posts and shared links.</p>
+        <ul class="book-list reveal d2">
+        <li><h3>Cover and contents</h3><p>Online posts and shared links open with a cover. Title, map and contents at a glance.</p></li>
+        <li><h3>Slide and Expand</h3><p>Photos sit in a pile and turn one by one. Or switch to Expand.</p></li>
+        <li><h3>Profile</h3><p>Add a nickname, short bio and up to 4 links. They appear on your online posts and shared links.</p></li>
+        </ul>
+      </div>
+      <div class="book-phones reveal">
+        <div class="iphone side"><div class="screen"><img src="../assets/en/book/cover.webp" alt="Online post cover: title, profile, map and contents" width="660" height="1434" loading="lazy"></div></div>
+        <div class="book-main">
+          <div class="iphone"><div class="screen"><video data-curl muted playsinline preload="metadata" poster="../assets/en/book/curl.webp" src="../assets/en/book/curl.mp4" aria-label="A trip cover is swiped sideways, curling like paper to reveal the next page"></video></div></div>
+          <button type="button" class="replay" data-replay data-track="book_replay">Turn the page again</button>
+        </div>
+        <div class="iphone side"><div class="screen"><img src="../assets/en/book/page.webp" alt="One fill page: photo slides with the profile at the bottom" width="660" height="1434" loading="lazy"></div></div>
       </div>
     </div>
   </section>
@@ -219,7 +255,6 @@
   <section class="kyoto" id="samples">
     <img class="kyoto-bg" src="../assets/photo/night.webp" alt="" width="600" height="400" loading="lazy">
     <div class="wrap">
-      <span class="kicker">EXAMPLE · FLORENCE</span>
       <div class="head-row">
         <h2 class="display reveal">This is what you keep.</h2>
         <p class="reveal d1">A day in Florence, kept with Pic&amp;Fill. Swipe through, then open the real thing.</p>
@@ -242,21 +277,22 @@
   <section class="features" id="features">
     <div class="wrap">
       <h2 class="display reveal" style="margin-bottom:56px">Write less,<br>keep longer.</h2>
-      <div class="feat-grid">
-        <div class="feat wide reveal"><div><span class="ic">⌖</span><h3>What your photos remember</h3><p>The time and place a photo was taken fill in the date, place and weather.</p></div><img src="../assets/photo/pagoda.webp" alt="" width="590" height="400" loading="lazy"></div>
-        <div class="feat reveal d1"><span class="ic" style="background:var(--peach-ink)">↗</span><h3>Links, no app needed</h3><p>Viewers open it on the web. You choose the password, how long it lasts and whether to hide exact locations.</p></div>
-        <div class="feat reveal d2"><span class="ic" style="background:var(--navy)">A4</span><h3>A4 PDF export</h3><p>Save and print a book with a cover and contents.</p></div>
-        <div class="feat reveal"><span class="ic" style="background:var(--gold)">9</span><h3>Gentle reminders</h3><p>At 9 p.m. for missed notes, and a year later for that day's memories.</p></div>
-        <div class="feat reveal d1"><span class="ic" style="background:var(--travel)">▣</span><h3>A private archive</h3><p>Your original photos stay as they are, backed up to your own Google Drive folder.</p></div>
-        <div class="feat reveal d2"><span class="ic" style="background:var(--ink)">◐</span><h3>Dark mode</h3><p>Follows your phone's theme automatically.</p></div>
-        <div class="feat reveal d3"><span class="ic" style="background:var(--peach)">あ</span><h3>한국어 · English · 日本語</h3><p>Available in three languages.</p></div>
+      <div class="feature-list reveal">
+        <div class="feature-row"><h3>Online</h3><p>Browse other people's trips on a city map, and post your own.</p></div>
+        <div class="feature-row"><h3>What your photos remember</h3><p>The time and place a photo was taken fill in the date, place and weather.</p></div>
+        <div class="feature-row"><h3>Links, no app needed</h3><p>Viewers open it on the web. You choose the password, how long it lasts and whether to hide exact locations.</p></div>
+        <div class="feature-row"><h3>A4 PDF export</h3><p>Save and print a book with a cover and contents.</p></div>
+        <div class="feature-row"><h3>Gentle reminders</h3><p>At 9 p.m. for missed notes, and a year later for that day's memories.</p></div>
+        <div class="feature-row"><h3>A private archive</h3><p>Your original photos stay as they are, backed up to your own Google Drive folder.</p></div>
+        <div class="feature-row"><h3>Dark mode</h3><p>Follows your phone's theme automatically.</p></div>
+        <div class="feature-row"><h3>한국어 · English · 日本語</h3><p>Available in three languages.</p></div>
       </div>
     </div>
   </section>
 
   <section class="plans" id="plans">
     <div class="wrap">
-      <h2 class="display reveal">Start free.<br><span style="color:#B6B2A8">Go Plus when you need it.</span></h2>
+      <h2 class="display reveal">Start free.<br><span class="soft">Go Plus when you need it.</span></h2>
       <div class="plan-grid">
         <div class="plan reveal">
           <h3>Free</h3>
