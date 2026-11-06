@@ -105,6 +105,20 @@ document.querySelectorAll('.chapter').forEach((ch) => {
 });
 
 // 책처럼 읽기: 화면에 들어올 때 한 번 넘김 (4초, 반복 없음). 움직임 줄이기면 멈춘 그림, 버튼으로만 재생
+// 첫 화면 앱 영상: 멈춤 버튼, '동작 줄이기'면 처음부터 멈춤, 화면 밖에선 쉼
+const hero = document.querySelector('[data-hero]');
+if (hero) {
+  const btn = document.querySelector('[data-hero-toggle]');
+  const PAUSE = 'M7 5h4v14H7zM13 5h4v14h-4z', PLAY = 'M8 5v14l11-7z';
+  let wanted = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const show = () => { btn.setAttribute('aria-label', wanted ? btn.dataset.pause : btn.dataset.play); btn.querySelector('path').setAttribute('d', wanted ? PAUSE : PLAY); };
+  const apply = (seen) => { if (wanted && seen) hero.play().catch(() => {}); else hero.pause(); };
+  let seen = true;
+  btn.addEventListener('click', () => { wanted = !wanted; show(); apply(seen); });
+  new IntersectionObserver(([e]) => { seen = e.isIntersecting; apply(seen); }).observe(hero);
+  show(); apply(seen);
+}
+
 const curl = document.querySelector('[data-curl]');
 if (curl) {
   const replay = () => { curl.currentTime = 0; curl.play().catch(() => {}); };

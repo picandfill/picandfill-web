@@ -35,7 +35,9 @@ IBM Plex Sans KR (일본어는 시스템 글꼴). 앱·PDF와 같음.
 - **폰(`.iphone`)**: 기울이지 않음. 안의 화면은 시연 데이터로 찍은 실제 앱 화면
 
 ## 하지 말 것
-번지는 원형 그림자, 3D로 기울인 폰, 기호 아이콘, 영어 작은 글자(TRAVEL 같은 것), 01·02 번호, 같은 모양 카드 묶음, 반복 재생 영상.
+번지는 원형 그림자, 3D로 기울인 폰, 기호 아이콘, 영어 작은 글자(TRAVEL 같은 것), 01·02 번호, 같은 모양 카드 묶음, 반복 재생 영상(첫 화면 앱 영상 하나만 예외, 멈춤 버튼·동작 줄이기 대응 필수).
 
 ## 화면 다시 찍기
 `store/video/site_i18n/site104_{ko,en,ja}` (앱 저장소) → `app/tool/demo/run.sh`. 온라인 글 사진은 그 photos 폴더를 `python3 -m http.server 8765`로 띄워 둠.
+
+첫 화면 앱 영상: 앱 저장소 `store/video/site_i18n/hero.sh`(시연 데이터·녹화) → `hero_edit.py`(잇기), 언어별 시간은 `hero_times.json`.

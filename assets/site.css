@@ -233,15 +233,20 @@ html:lang(ja) body { word-break: normal; line-break: strict; }
 .hero-stage .big figcaption { position: absolute; right: 20px; top: 20px; background: rgba(255,255,255,.92); border-radius: 16px; padding: 12px 16px; font-size: 14px; line-height: 1.5; }
 .hero-stage .big b { display: block; font-size: 12px; color: var(--travel); }
 .hero-stage .big small { display: block; color: var(--sub); }
-.hero-stage .iphone { --w: min(19vw, 260px, 26svh); position: absolute; left: 4%; top: 18%; z-index: 2; }
+.hero-stage .iphone { --w: min(24vw, 320px, 37svh); position: absolute; left: 0; top: 3%; z-index: 2; }
+.hero-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-toggle { position: absolute; z-index: 3; right: calc(var(--w) * -.04); bottom: calc(var(--w) * -.04); width: 40px; height: 40px; padding: 11px; border: 0; border-radius: 50%; background: var(--ink); color: #fff; cursor: pointer; box-shadow: 0 0 0 2px var(--bg); }
+@media (max-width: 1280px) { .hero-stage .big figcaption { display: none; } } /* 커진 폰에 가려짐 */
+.hero-toggle svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+.hero-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .hero-stage .polaroid { position: absolute; right: 3%; bottom: 0; z-index: 3; width: min(15vw, 200px); margin: 0; background: #fff; padding: 10px 10px 30px; border-radius: 6px; box-shadow: 0 20px 40px -12px rgba(0,0,0,.3); font-size: 13px; rotate: 5deg; }
 .hero-stage .polaroid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
 .hero-stage .polaroid figcaption { margin-top: 8px; }
 @media (max-width: 900px) {
-  .hero-stage { height: 112vw; max-height: 560px; margin-top: 24px; }
+  .hero-stage { height: 124vw; max-height: 620px; margin-top: 24px; }
   .hero-stage .big { width: 80%; height: 86%; border-radius: 22px; }
   .hero-stage .big figcaption { display: none; }
-  .hero-stage .iphone { --w: 38vw; left: 0; top: 22%; }
+  .hero-stage .iphone { --w: min(52vw, 260px); left: 0; top: 3%; }
   .hero-stage .polaroid { width: 34vw; padding: 7px 7px 22px; font-size: 11px; }
 }
 
