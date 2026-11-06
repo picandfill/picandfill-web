@@ -106,6 +106,20 @@ if (hero && !still && matchMedia('(hover: hover)').matches) {
   }, { passive: true });
 }
 
+// 첫 화면 앱 영상: 멈춤 버튼, '동작 줄이기'면 처음부터 멈춤, 화면 밖에선 쉼
+const heroVideo = document.querySelector('[data-hero]');
+if (heroVideo) {
+  const btn = document.querySelector('[data-hero-toggle]');
+  const PAUSE = 'M7 5h4v14H7zM13 5h4v14h-4z', PLAY = 'M8 5v14l11-7z';
+  let wanted = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const show = () => { btn.setAttribute('aria-label', wanted ? btn.dataset.pause : btn.dataset.play); btn.querySelector('path').setAttribute('d', wanted ? PAUSE : PLAY); };
+  const apply = (seen) => { if (wanted && seen) heroVideo.play().catch(() => {}); else heroVideo.pause(); };
+  let seen = true;
+  btn.addEventListener('click', () => { wanted = !wanted; show(); apply(seen); });
+  new IntersectionObserver(([e]) => { seen = e.isIntersecting; apply(seen); }).observe(heroVideo);
+  show(); apply(seen);
+}
+
 // 세 공간: 눌러서 그 공간의 4단계 펼치기 (늘 하나만, 화살표 키로도 이동)
 const tabs = [...document.querySelectorAll('.space-tab')];
 const pick = (t) => tabs.forEach((x) => {

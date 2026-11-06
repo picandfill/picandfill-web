@@ -284,6 +284,10 @@ html:lang(ja) body { word-break: normal; line-break: strict; }
 .hero-stage .iphone { --w: min(19vw, 260px, 26svh); position: absolute; left: 4%; top: 18%; z-index: 2; }
 .hero-stage .polaroid { position: absolute; right: 3%; bottom: 0; z-index: 3; width: min(15vw, 200px); margin: 0; background: #fff; padding: 10px 10px 30px; border-radius: 6px; box-shadow: 0 20px 40px -12px rgba(0,0,0,.3); font-size: 13px; rotate: 5deg; }
 .hero-stage .polaroid img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
+.hero-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-toggle { position: absolute; z-index: 3; right: calc(var(--w) * -.04); bottom: calc(var(--w) * -.04); width: 40px; height: 40px; padding: 11px; border: 0; border-radius: 50%; background: var(--ink); color: #fff; cursor: pointer; box-shadow: 0 0 0 2px var(--bg); }
+.hero-toggle svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+.hero-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .hero-stage .polaroid figcaption { margin-top: 8px; }
 @media (max-width: 900px) {
   .hero-stage { height: 112vw; max-height: 560px; margin-top: 24px; }
