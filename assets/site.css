@@ -382,3 +382,16 @@ section[id] { scroll-margin-top: 68px; }
 .chapter { scroll-margin-top: 0; }
 @media (max-width: 760px) { .top nav + .lang-pill { margin-left: auto; } }
 @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
+
+/* 오른쪽 위 '다운로드': 스토어 고르는 창 */
+button.btn { border: 0; font-family: inherit; cursor: pointer; }
+.store-dialog { width: min(380px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 24px; background: var(--card); color: var(--ink); }
+.store-dialog::backdrop { background: rgba(27, 27, 25, .55); }
+.store-in { position: relative; padding: 28px 24px 24px; }
+.store-in h2 { margin: 0 44px 20px 0; font-size: 20px; line-height: 1.35; }
+.store-btns { display: flex; flex-direction: column; gap: 10px; }
+.store-btns .btn { justify-content: center; padding: 15px 20px; font-size: 16px; }
+.store-close { position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; padding: 12px; border: 0; border-radius: 50%; background: none; color: var(--ink); cursor: pointer; }
+.store-close:hover { background: var(--line); }
+.store-close svg { display: block; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.store-btns .btn:focus-visible, .store-close:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }

@@ -105,6 +105,15 @@ document.querySelectorAll('.chapter').forEach((ch) => {
 });
 
 // 책처럼 읽기: 화면에 들어올 때 한 번 넘김 (4초, 반복 없음). 움직임 줄이기면 멈춘 그림, 버튼으로만 재생
+// 오른쪽 위 '다운로드': 스토어 고르는 창. 창 바깥을 눌러도 닫힘 (Esc·포커스 가두기는 dialog가 함)
+const storeDialog = document.querySelector('[data-download]');
+if (storeDialog) {
+  document.querySelector('[data-download-open]').addEventListener('click', () => storeDialog.showModal());
+  storeDialog.addEventListener('click', (e) => {
+    if (e.target === storeDialog || e.target.closest('[data-download-close]')) storeDialog.close();
+  });
+}
+
 // 첫 화면 앱 영상: 멈춤 버튼, '동작 줄이기'면 처음부터 멈춤, 화면 밖에선 쉼
 const hero = document.querySelector('[data-hero]');
 if (hero) {
